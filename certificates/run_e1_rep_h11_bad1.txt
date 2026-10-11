@@ -1,0 +1,12 @@
+E1 h=11 m=1331 v=330 centre=165 J-supported side wires/entry=35  ordered pairs by |S^T| (0..7): 0 0 0 11550 46200 41580 9240 0  non-nbr=87780 bad=1 seed=1
+[1a] scalar identity RG + JV = I over F_2 (V read on supp J): 0 wrong entries
+[1c] three facts: norm!=1: 0, neighbour not orthogonal: 0, side-wire Gram != I2: 0
+[1b] scalar network, 3 invocation(s) (representative, one per stage), random F_4 values: per-invocation y->y+x failures 0 / 1980, aux not restored 0
+[2] u* . u* = 1 (Lemma 6.1 needs norm 1)
+[2] stage 1 representative invocation: 992 labels, steps 15602895 (decrease 1815), side wires 11550, centre 165; edges so far 999; fails nondeg 0 nest 7382 res 0 degres 0 phase 0 wirephase 0
+[2] stage 2 representative invocation: 992 labels, steps 15635895 (decrease 1815), side wires 11550, centre 165; edges so far 1999; fails nondeg 0 nest 14764 res 0 degres 0 phase 0 wirephase 0
+[2] stage 3 representative invocation: 992 labels, steps 15998895 (decrease 1815), side wires 11550, centre 165; edges so far 2999; fails nondeg 0 nest 22146 res 0 degres 0 phase 0 wirephase 0
+[3] d* path: edges outside invocations X 1300, Y 0 (no correction: pre-pass mu=2), decrease 0; whole path X 1330, Y 1330
+[3] W = 3899164500; orbit-weighted exact steps = 5190901996500; closed form Wm - 2 N0 + 2 I0 c h = 5190901996500; match=YES; decrease 592960500 (pred I0 c h = 592960500)
+[3] Delta = Wm - steps = -1114047000  (2 v^2 (v - 3ch) = -1114047000)
+FAIL totals: nondeg 0 nest 22146 residual 0 degenerate-residual 0 edge-phase 0 wire-phase 0 | labels 2980 edges 3000

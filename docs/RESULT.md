@@ -61,7 +61,12 @@ C'^{⊗mf}.
   It is checked on the Fourier side for 42 lines (`x1_prepass_check.py`) and in a real network (`x1_real_arrays.py`
   mode 4, configs A and B, every role correct, steps = s′ − N₀). A one-sided adapter fails 0/42 and 18/18 (controls).
 - **E1 (Theorem 2).** 7-subset labels, 3-subset centre, side wires on |S∩T| = 3 pairs only (PROOF.md §10). The centre is
-  checked in Lean for every h, and one invocation is run at h = 11, 12 (`x1_e1_check.py`). No full 7-set network run.
+  checked in Lean for every h, and one invocation is run at h = 11, 12 (`x1_e1_check.py`). Full-network check at h = 8–11
+  (`x1_e1_rep.c`): scalar network over all invocations at h = 8, 9, 10 and one representative invocation per stage at
+  h = 11; brute-force F₃ linear algebra on every edge of the representative invocations (nondegeneracy, nesting,
+  residual, orthogonal basis, phase); the d* bank path with the pre-pass (μ = 2, no correction kernel); the
+  orbit-weighted exact step count equals the closed form Wm − 2N₀ + 2I₀ch at every h; 0 failures. Refuted controls:
+  a wrong row-5 label (22 146 nesting failures at h = 11) and a 2-subset centre (277 200 RG + JV violations at h = 12).
 - **Referee's overclaim, corrected.** An earlier note quoted a larger exponent for E1 with the pre-pass. That figure
   needs the unproved batching recurrence (the open note above). Under the proved Thm 2.6′ the value is 4.37·10⁻¹¹.
 
@@ -86,6 +91,7 @@ C'^{⊗mf}.
 | `x1_word_check.py` | Independent check of the S⊗S word, plus log `run_word_check.txt`. |
 | `x1_prepass_check.py` | Lemma 6.1 on the Fourier side, 42 lines, with the one-sided control; log `run_prepass_check.txt`. |
 | `x1_e1_check.py` | Lemma 10.1 and one E1 invocation at h = 11, 12, with two controls; log `run_e1_check.txt`. |
+| `x1_e1_rep.c` | E1 full-network check (Theorem 2) at h = 8–11, plus logs `run_e1_rep_h{8,9,10,11}_bad0.txt`, `run_e1_rep_h11_bad1.txt`, `run_e1_rep_h12_bad2.txt`. |
 | `x1_theorems.py` | The three rows: closed forms vs the cell walk, sign thresholds, best h, 1 − θ′, crossovers; log `run_theorems.txt`. |
 
 Every run used nice -n 15, one core, at most 330 MB and at most 220 s (alarm 600).

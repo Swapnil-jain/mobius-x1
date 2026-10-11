@@ -104,5 +104,21 @@ class Network(unittest.TestCase):
                                       r'edge-phase 0 wire-phase 0')
 
 
+@unittest.skipUnless(shutil.which('cc'), 'no C compiler')
+class E1Full(unittest.TestCase):
+    def test_e1_rep_h8_h9(self):
+        with tempfile.TemporaryDirectory() as d:
+            for h, delta in ((8, '-171008'), (9, '-5785344')):
+                exe = os.path.join(d, f'e1rep{h}')
+                subprocess.run(['cc', '-O2', f'-DH={h}', '-o', exe, 'x1_e1_rep.c'], cwd=CERT, check=True)
+                out = run(exe)
+                self.assertIn('match=YES', out)
+                self.assertNotIn('match=NO', out)
+                self.assertIn('bank swap failures 0 /', out)
+                self.assertIn(f'(2 v^2 (v - 3ch) = {delta})', out)
+                self.assertRegex(out, r'FAIL totals: nondeg 0 nest 0 residual 0 degenerate-residual 0 '
+                                      r'edge-phase 0 wire-phase 0')
+
+
 if __name__ == '__main__':
     unittest.main()
