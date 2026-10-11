@@ -23,7 +23,7 @@ factor 1; config B puts neighbour and non-neighbour families with B != 0 in fact
 Dependency: numpy (the only non-stdlib dependency of the certificates; tested with numpy 2.0.2 under macOS /usr/bin/python3).
 Run it WITHOUT -I if numpy lives in user site-packages.  Every other x1 script is stdlib-only.
 
-Usage: /usr/bin/python3 x1_real_arrays.py A|B [f] [bad]
+Usage: python3 x1_real_arrays.py A|B [f] [bad]
   bad=1: drop the Y_d correction kernel (Y_d roles must fail);
   bad=2: row-5 label uses another entry's t-perp (nesting must fail);
   bad=3: (config A) Lucas centre of size <= 1 (scalar network wrong, banks must fail);

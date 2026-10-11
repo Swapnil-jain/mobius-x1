@@ -6,7 +6,7 @@ fails on anything beyond `propext`, `Classical.choice` and `Quot.sound`.
 
 ```sh
 lake exe cache get        # once: the Mathlib build cache
-./build_watch.sh build    # every module, one at a time, nice -n 19, one thread, aborts above 3 GB of RSS
+./build_watch.sh build    # every module, one at a time, nice -n 19, one thread, optional RSS abort (set LIMIT_MB=3072 on an 8 GB machine) of RSS
 ./axioms_audit.sh         # the axioms of every theorem in MobiusLean/Axioms.lean
 ```
 

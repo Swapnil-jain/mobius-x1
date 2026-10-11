@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # Low-memory local Lean build: nice -n 19, one Lean thread (lakefile.toml), RSS watchdog.
 #   build_watch.sh [lake args...]      e.g. build_watch.sh build MobiusLean.Stage1Points
-# Every 1 s it sums the RSS of all lean/lake processes started under this script; above LIMIT_MB (default 3072)
+# Every 1 s it sums the RSS of all lean/lake processes started under this script; above LIMIT_MB (default 0 = off)
 # it kills the build and exits 3. Peak RSS (MB) is printed at the end and appended to .lake/build_peak.log.
 set -u
-LIMIT_MB=${LIMIT_MB:-3072}
+LIMIT_MB=${LIMIT_MB:-0}   # 0 = no limit (default). On an 8 GB machine run with LIMIT_MB=3072.
 # Use the lake on PATH (elan), or else elan's default toolchain directory.
 command -v lake >/dev/null || export PATH=${ELAN_HOME:-$HOME/.elan}/toolchains/leanprover--lean4---v4.34.1/bin:$PATH
 cd "$(dirname "$0")"
@@ -28,7 +28,7 @@ while kill -0 $PID 2>/dev/null; do
   kb=0
   for p in $(tree $PID); do r=$(ps -o rss= -p "$p" 2>/dev/null | tr -d ' '); kb=$((kb + ${r:-0})); done
   mb=$((kb / 1024)); [ $mb -gt $peak ] && peak=$mb
-  if [ $mb -gt "$LIMIT_MB" ]; then
+  if [ "$LIMIT_MB" -gt 0 ] && [ $mb -gt "$LIMIT_MB" ]; then
     echo "ABORT: RSS ${mb} MB > ${LIMIT_MB} MB"; for p in $(tree $PID); do kill -9 "$p" 2>/dev/null; done
     echo "$(date '+%F %T') ABORT peak ${peak} MB: lake $*" >> .lake/build_peak.log; exit 3
   fi

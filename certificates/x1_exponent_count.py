@@ -21,7 +21,7 @@ The count is an edge-by-edge sum, not the closed form:
 The per-stage numbers are compared at h = 6..10 with the brute-force F_3 linear algebra of x1_e2e_rep.c.
 Brute force at h >= 79 is impossible: m = h^3 >= 493039, and a single label basis has ~ m^2/4 trits.
 
-Usage: /usr/bin/python3 x1_exponent_count.py
+Usage: python3 x1_exponent_count.py
 """
 import os
 import re
