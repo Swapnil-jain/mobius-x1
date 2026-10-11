@@ -1,0 +1,13 @@
+name = "MobiusLean"
+defaultTargets = ["MobiusLean"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "v4.34.1"
+
+[[lean_lib]]
+name = "MobiusLean"
+# Low memory on the 8 GB Mac: one elaboration thread per Lean process. Build one module at a time
+# (lake has no -j flag; build_watch.sh builds the named target, and our modules form a chain).
+moreLeanArgs = ["--threads=1"]

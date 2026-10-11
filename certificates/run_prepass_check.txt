@@ -1,0 +1,8 @@
+m=1 f=1: R_u = M1 C'^(x)1 M2 for 2/2 norm-1 u; one-sided control (R_u C'^-1 monomial) 0/2  OK
+m=2 f=1: R_u = M1 C'^(x)2 M2 for 4/4 norm-1 u; one-sided control (R_u C'^-1 monomial) 0/4  OK
+m=3 f=1: R_u = M1 C'^(x)3 M2 for 6/6 norm-1 u; one-sided control (R_u C'^-1 monomial) 0/6  OK
+m=4 f=1: R_u = M1 C'^(x)4 M2 for 24/24 norm-1 u; one-sided control (R_u C'^-1 monomial) 0/24  OK
+m=1 f=2: R_u = M1 C'^(x)2 M2 for 2/2 norm-1 u; one-sided control (R_u C'^-1 monomial) 0/2  OK
+m=2 f=2: R_u = M1 C'^(x)4 M2 for 4/4 norm-1 u; one-sided control (R_u C'^-1 monomial) 0/4  OK
+total norm-1 lines checked: 42
+PASS: two-sided pre-pass holds for every u; one-sided adapters fail for every u

@@ -1,0 +1,33 @@
+h=6 m=216 v=15 centre=22 ordered nbr pairs=120 non-nbr pairs=90 bad=0 seed=1
+  stage 1 invocation 75/675 distinct edges 25050 steps 2331450 labels alive 1202
+  stage 1 invocation 150/675 distinct edges 50100 steps 4662900 labels alive 2402
+  stage 1 invocation 225/675 distinct edges 75150 steps 6994350 labels alive 3602
+  stage 2 invocation 300/675 distinct edges 101325 steps 9382050 labels alive 3677
+  stage 2 invocation 375/675 distinct edges 127500 steps 11769750 labels alive 3752
+  stage 2 invocation 450/675 distinct edges 153675 steps 14157450 labels alive 3602
+  stage 3 invocation 525/675 distinct edges 179850 steps 16882650 labels alive 3602
+  stage 3 invocation 600/675 distinct edges 206025 steps 19607850 labels alive 3602
+  stage 3 invocation 675/675 distinct edges 232200 steps 22333050 labels alive 3602
+wires W=102600  labels made=41852 (max alive 3859)  distinct edges=235800
+FAIL counts: nondegenerate-label 0, nesting 0, residual-dim 0, degenerate-residual 0, phase-crosscheck 0/9724
+sink checks (x NF=4 freqs): aux role failures 0, X_d failures 0, Y_d failures 0
+steps = 22336425   predicted Wm - N0 + 2 I0 c h = 22336425   match=YES   total decrease = 89100 (pred I0 c h = 89100)
+Delta' = Wm - steps = -174825   (= v^2 (v - 6ch) = -174825)
+      146.25 real       141.80 user         0.40 sys
+           115376128  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                8115  page reclaims
+                  11  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   6  voluntary context switches
+               65563  involuntary context switches
+       1468989328045  instructions retired
+        310690076822  cycles elapsed
+           115213440  peak memory footprint

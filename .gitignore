@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+lean/.lake/
+certificates/rep6
+certificates/rep7
+certificates/m5_xref_e2e
+lean/axioms.out

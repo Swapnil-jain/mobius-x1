@@ -1,0 +1,33 @@
+The GF(2) Möbius transform below N log N (X1)
+Copyright 2026 Swapnil Jain
+
+This work builds on, and does not modify, the following:
+
+- OpenAI, "An explicit power saving for the exact discrete Fourier transform" (openai/math, problem 130; OpenAI is
+  the author listed on the preprint), and its companion "Finite tensor savings and exact Fourier circuits". The
+  architecture of the network: the eight-row schedule, the three stages, the label table, the frames and directional
+  kernels, the telescoping, and the batching recurrence (its Section 2: Lemmas 2.1 to 2.5, Prop 2.4, Thm 2.6). Its
+  proof is over the complex numbers with the kernel C = [[a,b],[b,a]], a = (1+i)/2. Nothing here uses its statements
+  as hypotheses: every step used is re-proved in proofs/PROOF.md in the flipped setting.
+- Joan Boyar and Magnus Gausdal Find, arXiv 1207.5321 and 1305.3041: the cancellation-free lower bound
+  (1/2) N log N for the Sierpinski matrix, and the question of how much cancellation can help. Context only.
+- Igor S. Sergeev, slides "Lower bounds for linear circuits" (2024) and Math. Notes 118 (2025) 848-862: the open
+  problem "is L(D_n) < n 2^{n-1}?" and the lower bound (3 - o(1)) 2^n. Context only.
+- Frank Yates (1937): the (1/2) N log2 N algorithm. Édouard Lucas (1878): the binomial theorem mod p used for both
+  centres. Reflections generating an isometry between two vectors of equal nonzero norm (Witt's theorem, odd
+  characteristic) are classical; Lemma 6.1 writes out the two-reflection case it needs.
+- Lean 4 and Mathlib (leanprover-community/mathlib4): the kernel checks in lean/, including Mathlib's series bound
+  Real.abs_log_sub_add_sum_range_le behind every log enclosure.
+
+What is new here:
+- The characteristic flip of the preprint's network: F3 labels, F4 and F16 data, the Lucas centre mod 2 and the
+  correction kernel (Theorem 1).
+- The two-sided monomial pre-pass that removes the correction kernel (Lemma 6.1, Theorem 1'). The preprint's
+  exceptional route is corrected at the sink only.
+- The E1 gadget: 7-subset labels with a 3-subset centre, whose J vanishes on disjoint pairs (Theorem 2).
+- The written re-proofs in proofs/PROOF.md, the explicit 12-slot F16 word for S (x) S (proofs/WORD.md), and the
+  transfer to F2.
+- The scripts in certificates/ and the Lean modules in lean/.
+
+Research, implementation and drafting were done with assistance from Claude
+(Anthropic). AI assistance is not independent review.

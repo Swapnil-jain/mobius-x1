@@ -1,0 +1,49 @@
+validation against brute force (x1_e2e_rep.c logs: per-stage invocation steps, d* path, total):
+  h=6: per-stage [31086, 31461, 33711] brute [31086, 31461, 33711]; d* outside X 200 brute 200; total 22336425 brute 22336425 closed 22336425  match=True
+  h=7: per-stage [154833, 156093, 164913] brute [154833, 156093, 164913]; d* outside X 324 brute 324; total 596837150 brute 596837150 closed 596837150  match=True
+  h=8: per-stage [629796, 633226, 660666] brute [629796, 633226, 660666]; d* outside X 490 brute 490; total 9594484200 brute 9594484200 closed 9594484200  match=True
+  h=9: per-stage [2332728, 2340792, 2413368] brute [2332728, 2340792, 2413368]; d* outside X 704 brute 704; total 113921698968 brute 113921698968 closed 113921698968  match=True
+  h=10: per-stage [8250900, 8267910, 8438010] brute [8250900, 8267910, 8438010]; d* outside X 972 brute 972; total 1109606715000 brute 1109606715000 closed 1109606715000  match=True
+
+ h |        v | d_nbr |    c |  exact steps == closed form | Delta' = Wm - steps (exact) | sign | W*=3^w | eps' = Delta'/(W* m) | 1-theta'
+ 79 |  1502501 | 1215750 | 3161 |                        True |            9452191250689187 |    + | 3^53 | 9.8906e-16 | 7.5453e-17
+ 80 |  1581580 | 1283279 | 3241 |                        True |           64786138176760000 |    + | 3^53 | 6.5281e-15 | 4.9658e-16
+ 81 |  1663740 | 1353583 | 3322 |                        True |          136319980227724800 |    + | 3^53 | 1.3234e-14 | 1.0038e-15
+ 82 |  1749060 | 1426737 | 3404 |                        True |          227274894964411200 |    + | 3^54 | 7.0886e-15 | 5.3620e-16
+ 83 |  1837620 | 1502817 | 3487 |                        True |          341378997347253600 |    + | 3^54 | 1.0267e-14 | 7.7451e-16
+ 84 |  1929501 | 1581900 | 3571 |                        True |          482933032497282717 |    + | 3^54 | 1.4012e-14 | 1.0541e-15
+ 85 |  2024785 | 1664064 | 3656 |                        True |          656883132112650625 |    + | 3^54 | 1.8394e-14 | 1.3801e-15
+ 86 |  2123555 | 1749388 | 3742 |                        True |          868901259728171075 |    + | 3^54 | 2.3492e-14 | 1.7580e-15
+ 87 |  2225895 | 1837952 | 3829 |                        True |         1125474014625185925 |    + | 3^55 | 9.7974e-15 | 7.3127e-16
+ 88 |  2331890 | 1929837 | 3917 |                        True |         1434000511296379400 |    + | 3^55 | 1.2062e-14 | 8.9803e-16
+ 89 |  2441626 | 2025125 | 4006 |                        True |         1802900101045627672 |    + | 3^55 | 1.4660e-14 | 1.0887e-15
+ 90 |  2555190 | 2123899 | 4096 |                        True |         2241730754659935000 |    + | 3^55 | 1.7627e-14 | 1.3058e-15
+ 91 |  2672670 | 2226243 | 4187 |                        True |         2761318980235015200 |    + | 3^55 | 2.1005e-14 | 1.5522e-15
+ 92 |  2794155 | 2332242 | 4279 |                        True |         3373902208276911675 |    + | 3^55 | 2.4837e-14 | 1.8309e-15
+h=78: Delta' = -32455312764249375 (negative: the saving starts at h = 79)
+
+best h = 92: W* = 3^55, eps' = 2.483705e-14, 1 - theta' = 1.830916e-15
+crossover log10 k ~ log10(m) * ln(c0) / eps'  for an overhead ratio c0:
+  c0 =        2: levels d = 2.791e+13, log10 k ~ 1.644e+14
+  c0 =       84: levels d = 1.784e+14, log10 k ~ 1.051e+15
+  c0 =      420: levels d = 2.432e+14, log10 k ~ 1.433e+15
+  c0 =  10000.0: levels d = 3.708e+14, log10 k ~ 2.185e+15
+  c0 = 1000000.0: levels d = 5.562e+14, log10 k ~ 3.277e+15
+       13.56 real        13.15 user         0.08 sys
+            15237120  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                2267  page reclaims
+                 122  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  57  voluntary context switches
+                7491  involuntary context switches
+        114380138143  instructions retired
+         25202490554  cycles elapsed
+            11125568  peak memory footprint

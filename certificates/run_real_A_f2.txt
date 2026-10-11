@@ -1,0 +1,23 @@
+config A: factor dims (6, 1, 1), m=6, f=2, array length 3^12=531441, family sizes [15, 2, 2], centres [22, 2, 2], bad=0
+wires W=808 banks N0=60 directional steps=6084 predicted Wm-N0+2*sum(c*h_j)=6084 match=YES decrease=648 (pred sum c*h_j=648)
+failures: nondeg 0 nesting 0 residual-dim 0 degenerate-residual 0
+role checks vs exact C'^(x)12 (Yates): aux 0 fail / 688, X_d 0 fail / 60, Y_d 0 fail / 60
+time 108.9s  maxRSS 328 MB
+      109.11 real       107.70 user         0.44 sys
+           353009664  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               44676  page reclaims
+                  61  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                 304  voluntary context switches
+               38374  involuntary context switches
+       1128101003085  instructions retired
+        222023066098  cycles elapsed
+           348063168  peak memory footprint

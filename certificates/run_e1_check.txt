@@ -1,0 +1,6 @@
+Lucas table: C(n,3) odd exactly at n in {3,7} for n = 0..7: True
+h=11: v=330 c=165 J-supported side wires per entry=35 (35 C(h-7,4) = 35), |S cap T| on side wires [3], failures=0  OK
+h=12: v=792 c=220 J-supported side wires per entry=175 (35 C(h-7,4) = 175), |S cap T| on side wires [3], failures=0  OK
+control h=12, centre = 2-subsets: failures=1214  refuted as expected
+control h=11, 3-subset centre without J: failures=468  refuted as expected
+PASS: E1 invocation correct at h = 11, 12; both controls refuted

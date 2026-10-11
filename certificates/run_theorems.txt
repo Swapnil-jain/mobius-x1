@@ -1,0 +1,28 @@
+spot values (Delta at E1 h=21, 4-sets h=49 mu=2, 4-sets h=92 mu=1) and 2v^2(v-3ch): True
+family 4-sets mu=1: cell walk == closed form at h in (6, 7, 8, 79, 92): True
+family 4-sets mu=2: cell walk == closed form at h in (6, 7, 8, 43, 51): True
+family 7-sets mu=2: cell walk == closed form at h in (11, 12, 20, 23): True
+
+Theorem 1  (4-sets, mu=1): Delta > 0 exactly for h >= 79 (scanned to 200); best h = 92, m = 778688, v = 2794155, c = 4279, d = 2332242
+    W = 152632308680970042196469925, W* = 3^55, Delta = 3373902208276911675
+    eps = 2.4837049274e-14, 1 - theta' = 1.8309163030e-15
+    crossover, c0 =       2: log10 k ~ 1.644e+14
+    crossover, c0 =      84: log10 k ~ 1.051e+15
+    crossover, c0 = 1000000: log10 k ~ 3.277e+15
+Theorem 1' (4-sets, pre-pass, mu=2): Delta > 0 exactly for h >= 43 (scanned to 200); best h = 51, m = 132651, v = 249900, c = 1327, d = 178553
+    W = 8359663746785328810000, W* = 3^46, Delta = 5853939037380000
+    eps = 4.9792043456e-12, 1 - theta' = 4.2212827752e-13
+    crossover, c0 =       2: log10 k ~ 7.131e+11
+    crossover, c0 =      84: log10 k ~ 4.559e+12
+    crossover, c0 = 1000000: log10 k ~ 1.421e+13
+Theorem 2  (E1 7-sets, pre-pass, mu=2): Delta > 0 exactly for h >= 20 (scanned to 120); best h = 23, m = 12167, v = 245157, c = 1771, d = 63700
+    W = 2815776474755079872223, W* = 3^45, Delta = 14780032279463484
+    eps = 4.1118324738e-10, 1 - theta' = 4.3712752456e-11
+    crossover, c0 =       2: log10 k ~ 6.887e+09
+    crossover, c0 =      84: log10 k ~ 4.402e+10
+    crossover, c0 = 1000000: log10 k ~ 1.373e+11
+
+OPEN, NOT PROVED: whole-residual batching (one C'^(x)(rho f) call per residual, no padding)
+    E1 + pre-pass: 1 - theta = 3.9762e-9 at h = 21  [conjecture only]
+
+PASS

@@ -1,0 +1,28 @@
+h=7 m=343 v=35 centre=29 d_nbr=12  ordered pairs by |S^T| (0..3): 0 140 630 420  non-nbr=770 bad=1 seed=1
+[1a] scalar identity RG + JV = I over F_2: 0 wrong entries
+[1b] scalar network, all 3675 invocations, random F_4 values: bank swap failures 0 / 85750, aux not restored 0
+[2] stage 1 representative invocation: 107 labels, steps 153558 (decrease 203), side wires 420, centre 29; edges so far 1020; fails nondeg 0 nest 255 res 0 degres 0 phase 0 wirephase 690
+[2] stage 2 representative invocation: 107 labels, steps 154818 (decrease 203), side wires 420, centre 29; edges so far 2041; fails nondeg 0 nest 510 res 0 degres 0 phase 0 wirephase 1284
+[2] stage 3 representative invocation: 107 labels, steps 163638 (decrease 203), side wires 420, centre 29; edges so far 3062; fails nondeg 0 nest 765 res 0 degres 0 phase 0 wirephase 2018
+[3] d* path: edges outside invocations X 324, Y 0 (+1 correction), decrease 0; whole path X 342, Y 342
+[3] W = 1735825; orbit-weighted exact steps = 592151525; closed form Wm - N0 + 2 I0 c h = 596837150; match=NO; decrease 746025 (pred I0 c h = 746025)
+[3] Delta' = Wm - steps = 3236450  (v^2 (v - 6ch) = -1449175)
+FAIL totals: nondeg 0 nest 765 residual 0 degenerate-residual 0 edge-phase 0 wire-phase 2018 | labels 325 edges 3063
+        0.87 real         0.85 user         0.00 sys
+            13664256  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                1447  page reclaims
+                  13  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   0  voluntary context switches
+                 300  involuntary context switches
+         10214100491  instructions retired
+          1697260455  cycles elapsed
+            13239168  peak memory footprint

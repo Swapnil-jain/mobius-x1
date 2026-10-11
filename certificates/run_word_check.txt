@@ -1,0 +1,5 @@
+1. C'^3 = I, w of order 3, C' commutes with all 3x3 permutations: OK
+2. the three 4-slot transvection words evaluate as stated: OK
+3. T1(0,1,2) . T2a(0,2,3) . T2b(1,2,3) = S (x) S exactly over F_16: OK
+4. slot list: 12 C'-slots (permutation conjugates of C' (+) 1), 15 monomial slots; product = S (x) S: OK
+5. mixed product at t = 2: prod of slot tensor squares = S^(x)4: OK

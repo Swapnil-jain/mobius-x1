@@ -1,0 +1,28 @@
+h=6 m=216 v=15 centre=22 d_nbr=8  ordered pairs by |S^T| (0..3): 0 0 90 120  non-nbr=90 bad=0 seed=1
+[1a] scalar identity RG + JV = I over F_2: 0 wrong entries
+[1b] scalar network, all 675 invocations, random F_4 values: bank swap failures 0 / 6750, aux not restored 0
+[2] stage 1 representative invocation: 47 labels, steps 31086 (decrease 132), side wires 120, centre 22; edges so far 320; fails nondeg 0 nest 0 res 0 degres 0 phase 0 wirephase 0
+[2] stage 2 representative invocation: 47 labels, steps 31461 (decrease 132), side wires 120, centre 22; edges so far 641; fails nondeg 0 nest 0 res 0 degres 0 phase 0 wirephase 0
+[2] stage 3 representative invocation: 47 labels, steps 33711 (decrease 132), side wires 120, centre 22; edges so far 962; fails nondeg 0 nest 0 res 0 degres 0 phase 0 wirephase 0
+[3] d* path: edges outside invocations X 200, Y 0 (+1 correction), decrease 0; whole path X 215, Y 215
+[3] W = 102600; orbit-weighted exact steps = 22336425; closed form Wm - N0 + 2 I0 c h = 22336425; match=YES; decrease 89100 (pred I0 c h = 89100)
+[3] Delta' = Wm - steps = -174825  (v^2 (v - 6ch) = -174825)
+FAIL totals: nondeg 0 nest 0 residual 0 degenerate-residual 0 edge-phase 0 wire-phase 0 | labels 145 edges 963
+        0.10 real         0.07 user         0.00 sys
+             6029312  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                 991  page reclaims
+                   6  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   0  voluntary context switches
+                 223  involuntary context switches
+           603635943  instructions retired
+           173418077  cycles elapsed
+             5587776  peak memory footprint
