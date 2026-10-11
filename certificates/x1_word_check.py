@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""X1-b: independent check of the explicit transfer word of proofs/WORD.md.
+"""Independent check of the explicit transfer word of proofs/WORD.md.
 
 Written from scratch (does not import m6_word_*.py).  F_16 = F_2[x]/(x^4 + x + 1), elements as integers
 (bit i = coefficient of x^i); w = x^5 = 6, w^2 = 7, C' = w I + w^2 J_3.

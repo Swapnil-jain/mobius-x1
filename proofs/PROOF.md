@@ -1,6 +1,6 @@
 # X1: written proof of the flipped network (F₃ labels, F₄ data) and of the transfer to M_k over F₂
 
-Private. Agent-written, **not human-refereed**. Three statements are proved here, all under the same recursion
+Preprint-stage. Agent-written, **not human-refereed**. Three statements are proved here, all under the same recursion
 (Thm 2.6′: one directional step per kernel, roles padded to a power of 3):
 
 | Statement | Gadget | Exceptional route | 1 − θ′ | Status |
@@ -347,7 +347,7 @@ Checked:
 
 > **Gotcha (the breaking site).** An *output-side* monomial alone can never remove the correction kernel: R_u·C′^{−⊗m} is
 > not monomial for any u (0/42 above, and mode 5 of `x1_real_arrays.py` fails 18/18). The pre-pass works only because it
-> has a monomial on **both** sides, M₂⁻¹ before the network on X_d and M₁⁻¹ after it on Y_d. An earlier internal note
+> has a monomial on **both** sides, M₂⁻¹ before the network on X_d and M₁⁻¹ after it on Y_d. An earlier draft of this repository
 > concluded from the one-sided case that μ = 1 is forced for odd label primes. That conclusion was wrong.
 
 **Proposition 2.4′.** For every f ≥ 1 and any number of spectator trits, the network applies C'^{⊗mf} to each of W arbitrary

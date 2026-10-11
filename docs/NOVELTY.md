@@ -97,7 +97,7 @@ Yes, in several places.
 | Alman–Rao 2211.06459 (STOC'23) | fan-in-2 arithmetic count, char ≠ 2 | (23/24) N log N for the WHT. Verbatim [verified]: "We focus on F whose characteristic is not 2, since the problem is trivial in such fields"; "it remains an open question to prove that an algorithm using o(N log N) operations is impossible". |
 | Alman 2211.04643 | bit operations with lookup tables (not a linear circuit) | O(2^n·n/log n) bit operations for exactly this transform (multilinear evaluation over F2). Not a gate count. [secondhand, our earlier literature notes] |
 | openai/math #130 (both preprints) | complex linear circuits / RAM, unrestricted coefficients | o(n log n) for the complex DFT. X1 is the char-2 transplant. The source excludes finite fields and its existence proof uses char 0. [verified] |
-| WHT analogue | complex | Before 2026-09: o(N log N) open (Alman, Alman–Rao). Now claimed below N log N by a third party via OpenAI's method (complex, unrefereed). The GF(2) case is not covered: the source's generation step is characteristic 0. |
+| WHT analogue | complex | Before 2026-09: o(N log N) open (Alman, Alman–Rao). The GF(2) case is not covered: the source's generation step is characteristic 0. |
 
 ## 5. References
 

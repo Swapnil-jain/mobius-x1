@@ -1,9 +1,9 @@
 # The GF(2) Möbius transform below N log N
 
-**Swapnil Jain. Private working repository: not human-refereed, do not cite or share.**
+**Swapnil Jain. Preprint-stage; checked by AI agents only, not human-refereed; asymptotic only.** "X1" is this project's internal name for the construction; it appears in file names and headings.
 
 Let S = [[1,0],[1,1]] and M_k = S^{⊗k}: the Möbius (zeta, Sierpinski) transform over GF(2) on N = 2^k inputs. Yates'
-algorithm computes it with (1/2) N log₂ N XORs. We show that its XOR-circuit complexity, for fan-in-2 circuits that are
+algorithm computes it with (1/2) N log₂ N XORs. We claim (not human-refereed, asymptotic only; crossover log₁₀ k ≳ 6.9·10⁹) that its XOR-circuit complexity, for fan-in-2 circuits that are
 allowed to cancel, is
 
   **L_{F₂}(M_k) = O(N (log N)^{θ′}), with θ′ < 1**, so L_{F₂}(M_k) = o(N log N).
@@ -39,12 +39,11 @@ work, each with its reason and scope.
 ## Credits
 
 - **The construction is from the openai/math explicit-DFT preprint**, "An explicit power saving for the exact discrete
-  Fourier transform", by OpenAI (its listed author; openai/math, problem 130). We use its architecture: the eight-row
+  Fourier transform", by OpenAI (its listed author; openai/math, problem 130; per their README, the openai/math material was "produced by an internal OpenAI model"). We use its architecture: the eight-row
   network, the three stages, the label table, the frames and kernels, and the recurrence that batches the fibres of each step (its Thm 2.6). Its proof is over ℂ.
   No statement of the preprint is used as a hypothesis here: every step we use is re-proved in the flipped setting.
 - **Context.** Joan Boyar and Magnus Gausdal Find (arXiv 1207.5321, 1305.3041) proved that (1/2) N log N is tight for
-  cancellation-free circuits for this matrix, and asked to what extent cancellation can help. Igor Sergeev (2024 slides;
-  Math. Notes 118, 2025) lists L(D_n) < n·2^{n−1} as an open problem and proves the lower bound (3 − o(1))·2^n.
+  cancellation-free circuits for this matrix, and asked to what extent cancellation can help. Igor Sergeev lists L(D_n) < n·2^{n−1} as an open problem and gives the lower bound (3 − o(1))·2^n, as stated in his 2024 slides (paper: Math. Notes 118, 2025).
 - **Ours:**
   - the characteristic flip: F₃ labels, F₄ and F₁₆ data, the Lucas centre mod 2, and the correction kernel;
   - the two-sided monomial pre-pass (Lemma 6.1), which removes the correction kernel;
@@ -58,7 +57,7 @@ See [NOTICE](NOTICE) for the full list of sources.
 
 ## 1. How it works
 
-- **Flip the characteristic.** The preprint's network has labels and data in the same characteristic 0. Here the labels
+- **Flip the characteristic.** The preprint uses F₂ labels with complex data. Here the characteristics are swapped: the labels
   live in F₃ and the data in F₄, with ω³ = 1. The kernel becomes C′ = ωI + ω²J₃, and the frames
   Φ_U = F·D_{ω^{Q(P_U y)}}·F⁻¹ telescope through the network as in the preprint.
 - **The centre.** The F₂ gadget needs RG + JV = I. With 4-subset labels and a centre of all subsets of size ≤ 2,

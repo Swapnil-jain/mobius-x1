@@ -1,6 +1,6 @@
 # X1 result (2026-10-11)
 
-**Verdict: ESTABLISHED (agent-checked).** No statement of the openai/math preprint is used as a hypothesis: the preprint supplies the architecture, and every step used is re-proved in `PROOF.md`. (Earlier wording, "modulo the preprint", understated this.) All of it is agent-written and agent-checked. **No human has refereed it.**
+**Status: claimed; proofs written and checked by AI agents only; no human referee.** No statement of the openai/math preprint is used as a hypothesis: the preprint supplies the architecture, and every step used is re-proved in `PROOF.md`. (Earlier wording, "modulo the preprint", understated this.) All of it is agent-written and agent-checked. **No human has refereed it.**
 
 - Every step of the preprint that X1 uses has been re-proved in the flipped setting, with a [proof] tag, in `PROOF.md`.
 - The only preprint item still cited is Lemma 2.5 (RAM-model address permutations). The circuit model does not use it.
@@ -22,7 +22,7 @@
 
 | Gap | Status | Evidence |
 |---|---|---|
-| (a) h = 6 run not reproducible; scalar stand-in | **Closed.** Reproduced the h = 6 run, and extended the checks to h = 7–10 plus real arrays. | `m5_xref_e2e.c` (in `certificates/`): 0 failures, 22 336 425 steps = closed form, 146 s, 115 MB. Its control bad=2 fails only on Y_d (6 777 / 13 500 here; XREF reported 6 779, a libc rand difference). `x1_e2e_rep.c` at h = 6, 7, 8, 9, 10: details below. |
+| (a) h = 6 run not reproducible; scalar stand-in | **Closed.** Reproduced the h = 6 run, and extended the checks to h = 7–10 plus real arrays. | `m5_xref_e2e.c` (in `certificates/`): 0 failures, 22 336 425 steps = closed form, 146 s, 115 MB. Its control bad=2 fails only on Y_d (6 777 / 13 500 here; the first referee's run reported 6 779, a libc rand difference). `x1_e2e_rep.c` at h = 6, 7, 8, 9, 10: details below. |
 | (b) no recursion level with f ≥ 2 on real arrays | **Closed for admissible toy data. Infeasible for the genuine family.** | The smallest genuine case has m = 125, so one column is 3¹²⁵ entries. `x1_real_arrays.py` executes Prop 2.4′ on real F₄ arrays (details below). |
 | (c) flipped lemmas have no written proof | **Closed** (written, not human-refereed). | `PROOF.md` §§1–7: Lemma 1.2, Lemma 2.1′, Lemmas 2.2′ and 3.1–3.4, Lemma 4.1, Lemma 5.1 and 2.3′, Prop 2.4′, Thm 2.6′. All are stated for general admissible data. |
 | (d) h ≥ 79 only extrapolated | **Closed as a re-derivation** (not independent of Lemma 5.1). | `x1_exponent_count.py`: an exact edge-by-edge count at every h from 79 to 92, with v, d_nbr and c enumerated (details below). Brute-force F₃ algebra in F₃^{h³} at h ≥ 79 is infeasible, since m ≥ 4.9·10⁵. |
@@ -67,8 +67,7 @@ C'^{⊗mf}.
 
 ## What remains open
 
-1. **A human referee** of `proofs/PROOF.md`, and of the preprint's §2, whose architecture it reuses. Until then, do not cite X1 outside
-   the repo.
+1. **A human referee** of `proofs/PROOF.md`, and of the preprint's §2, whose architecture it reuses. Until then: preprint-stage; checked by AI agents only, not human-refereed; asymptotic only.
 2. **The RAM-model statement.** It needs Lemma 2.5 with radix-3^m digits: [arg], not claimed.
 3. **Feasibility.** Every proved crossover is far beyond feasible k. The word length enters only as ln(w), so shortening
    the word cannot help.

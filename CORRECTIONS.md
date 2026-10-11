@@ -5,7 +5,7 @@ Dated corrections to the proofs, the checks and their descriptions. None of them
 
 ## 2026-10-11 (the pre-pass and E1)
 
-- **Overclaimed exponent, corrected (found by the pre-pass referee).** An earlier internal note quoted larger
+- **Overclaimed exponent, corrected (found by the pre-pass referee).** An earlier draft of this repository quoted larger
   exponents for the E1 gadget and for the 4-subset gadget with the pre-pass. Both figures assume a "whole-residual
   batching" recurrence, with one C′^{⊗ρf} call per residual and no padding. That recurrence is not proved. Under the proved recursion (Thm 2.6′, padded) the values are **4.37·10⁻¹¹ (Theorem 2)** and
   **4.22·10⁻¹³ (Theorem 1′)**. The batching value now appears only as a conjecture (`proofs/PROOF.md` §11).
@@ -13,7 +13,7 @@ Dated corrections to the proofs, the checks and their descriptions. None of them
   proved step in Prop 2.4′, the exceptional route, with the counts of §5 (s′_μ, Δ_μ), as Lemma 6.1.
 - **Scope of the pre-pass.** "Every odd label prime" was a sketch. Lemma 6.1 is proved for p = 3 only, which is all
   that is used. The cell-decomposition picture that came with the sketch is not needed and is not claimed.
-- **An earlier closure was wrong.** An internal note concluded that the correction kernel is forced for odd label
+- **An earlier closure was wrong.** An earlier draft of this repository concluded that the correction kernel is forced for odd label
   primes (μ = 1). That holds only for output-side (one-sided) adapters. A two-sided pre-pass removes it. The gotcha
   is now written at Lemma 6.1, and `docs/CLOSED_IDEAS.md` lists only the one-sided version as closed.
 - **E1's side-wire convention, now stated.** E1 places side wires only on the pairs where J ≠ 0, the ordered pairs with
