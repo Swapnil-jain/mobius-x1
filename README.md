@@ -52,6 +52,7 @@ work, each with its reason and scope.
   - the explicit 12-slot F₁₆ word (`proofs/WORD.md`);
   - the transfer to F₂;
   - the machine checks: the scripts in `certificates/` and the Lean modules in `lean/`.
+- **Contributions.** [ahrazzle](https://github.com/ahrazzle) added the E1 full-network check for Theorem 2 (`certificates/x1_e1_rep.c`): every invocation at h = 8, 9, 10 and one representative per stage at h = 11, 12, with brute-force linear algebra on every edge and refuted controls, which closed the "no full 7-set network has been run" gap.
 
 See [NOTICE](NOTICE) for the full list of sources.
 
