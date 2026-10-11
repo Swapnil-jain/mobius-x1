@@ -1,0 +1,5 @@
+E1 h=12 m=1728 v=792 centre=79 J-supported side wires/entry=175  ordered pairs by |S^T| (0..7): 0 0 16632 138600 277200 166320 27720 0  non-nbr=460152 bad=2 seed=1
+[1a] scalar identity RG + JV = I over F_2 (V read on supp J): 277200 wrong entries
+[1c] three facts: norm!=1: 0, neighbour not orthogonal: 0, side-wire Gram != I2: 0
+[1b] scalar network, 3 invocation(s) (representative, one per stage), random F_4 values: per-invocation y->y+x failures 1780 / 4752, aux not restored 0
+control refuted as expected (scalar level)

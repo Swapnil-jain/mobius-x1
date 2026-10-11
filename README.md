@@ -78,7 +78,7 @@ See [NOTICE](NOTICE) for the full list of sources.
 |---|---|
 | §§1–8 (Theorem 1) | Written proof, every step tagged [proof], [arg] or [cite]. Two independent AI referees: CONFIRMED WITH FIXES, with no claim-level defect. Their fixes are applied. |
 | Lemma 6.1, the pre-pass (Theorem 1′) | Written proof. One AI referee confirmed it and found an overclaim in our earlier exponent, now corrected (CORRECTIONS.md). Checked on the Fourier side for all 42 norm-1 lines with m ≤ 4, f ≤ 2, and in a real network (configs A and B: every role correct, with s′ − N₀ steps). One-sided controls fail. |
-| §10, E1 (Theorem 2) | Written proof, reusing §5's cell structure. One AI referee. Lemma 10.1 is proved in Lean for every finite type. One scalar invocation is executed at h = 11 and 12, with two controls. **No full 7-set network has been run.** |
+| §10, E1 (Theorem 2) | Written proof, reusing §5's cell structure. One AI referee. Lemma 10.1 is proved in Lean for every finite type. One scalar invocation is executed at h = 11 and 12, with two controls (`x1_e1_check.py`). Full-network check at h = 8–11: scalar network (all invocations at h ≤ 10), brute-force F₃ edges on representative invocations, the d* bank path with the pre-pass, orbit-weighted count = closed form, 0 failures; both controls refuted (`x1_e1_rep.c`). |
 | The count at large h | Re-derived from Lemma 5.1's cell tables (`x1_exponent_count.py`, `x1_theorems.py`). It is checked against brute-force F₃ linear algebra at h = 6–10 only, so it is not independent evidence at h = 23, 51 or 92. |
 | Real-array tests | Toy data, m ≤ 6. The genuine families have m ≥ 125 and are infeasible on arrays. |
 | Lean (`lean/`) | Lean 4 kernel checks: Mathlib, standard axioms only, no `sorry`, no `native_decide`. They cover the numeric core of all three theorems and the two centres (table below). Not in Lean: the network lemmas, the recursion and the transfer. |
@@ -110,6 +110,7 @@ make lean    # the Lean 4 kernel checks and the axioms audit (lean/README.md: el
 | `x1_theorems.py` | The three rows: closed form against the cell walk, sign thresholds, the best h, ε, 1 − θ′ and the crossovers. `--conjecture` also prints the unproved batching value, labelled as a conjecture. |
 | `x1_prepass_check.py` | Lemma 6.1 on the Fourier side, for 42 lines, with the one-sided control |
 | `x1_e1_check.py` | Lemma 10.1 and one E1 invocation at h = 11 and 12, with a 2-subset-centre control and a no-J control |
+| `x1_e1_rep.c` | E1 full-network check (Theorem 2): scalar network, brute-force F₃ edges on representative invocations, the d* bank path with the pre-pass, and the orbit-weighted count at h = 8–11; logs `run_e1_rep_h{8,9,10,11}_bad0.txt`, `run_e1_rep_h11_bad1.txt`, `run_e1_rep_h12_bad2.txt` |
 | `x1_exponent_count.py` | Theorem 1: the count at h = 79–92, and agreement with brute force at h = 6–10 |
 | `x1_e2e_rep.c`, `m5_xref_e2e.c` | The scalar network over all invocations, plus brute-force F₃ linear algebra on every edge (h = 6–10) |
 | `x1_real_arrays.py` | Prop 2.4′ on real F₄ arrays. Mode 4 runs the pre-pass; mode 5 is its one-sided control. |
